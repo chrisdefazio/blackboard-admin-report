@@ -1,6 +1,13 @@
 ## Blackboard (SOLE) Admin Prep – Enrollment Report
 
-This project simulates consuming Blackboard Learn (Anthology Learn) Public v1 APIs using mock JSON in `data/` and produces admin-friendly CSV and HTML reports. It is intentionally small, typed, and testable.
+A small weekend project to simulate Blackboard Learn (Anthology Learn) admin tasks:  
+loading course, user, and enrollment data, applying filters, and generating clean reports.
+
+**🔗 Live HTML Report:** [View here](https://chrisdefazio.github.io/blackboard-admin-report/)  
+**📂 Repo:** [GitHub](https://github.com/chrisdefazio/blackboard-admin-report)  
+**📄 CSV Output:** [enrollment_report.csv](out/enrollment_report.csv)
+
+---
 
 ### Quick start
 
