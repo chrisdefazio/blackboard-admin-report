@@ -1,0 +1,11 @@
+{
+  "results": [
+    { "id": "_2001_1", "uuid": "b317a895-e7f6-4796-a3fd-01bb18a61d65", "userName": "jdoe", "name": { "given": "Jane", "family": "Doe" }, "contact": { "email": "jane.doe@example.edu" }, "availability": { "available": "Yes" } },
+    { "id": "_2002_1", "uuid": "4e2a0f5c-0d6d-4f69-8a7a-41db3a6dd2ce", "userName": "tnguyen", "name": { "given": "Thanh", "family": "Nguyen" }, "contact": { "email": "thanh.nguyen@example.edu" }, "availability": { "available": "Yes" } },
+    { "id": "_2003_1", "uuid": "c9f1f2a1-2b8a-49fa-ae27-7a5f3a8b6f90", "userName": "csmith", "name": { "given": "Chris", "family": "Smith" }, "contact": { "email": "chris.smith@example.edu" }, "availability": { "available": "No" } },
+    { "id": "_2004_1", "uuid": "0e6a2f23-7e9b-4b3d-823a-0a0bb6d42f76", "userName": "aperez", "name": { "given": "Ana", "family": "Perez" }, "contact": { "email": "ana.perez@example.edu" }, "availability": { "available": "Yes" } },
+    { "id": "_2005_1", "uuid": "9c3d6d4a-2f9b-4e6e-9c47-4a6d2b1e8f03", "userName": "jlee", "name": { "given": "Jordan", "family": "Lee" }, "contact": { "email": "jordan.lee@example.edu" }, "availability": { "available": "Yes" } }
+  ],
+  "paging": { "nextPage": null }
+}
+

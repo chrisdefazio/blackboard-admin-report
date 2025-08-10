@@ -1,0 +1,24 @@
+{
+  "results": [
+    { "id": "_30001_1", "userId": "_2001_1", "courseId": "_12345_1", "role": "Student", "availability": { "available": "Yes" } },
+    { "id": "_30002_1", "userId": "_2002_1", "courseId": "_12345_1", "role": "TeachingAssistant", "availability": { "available": "Yes" } },
+    { "id": "_30003_1", "userId": "_2004_1", "courseId": "_12345_1", "role": "Instructor", "availability": { "available": "Yes" } },
+
+    { "id": "_30004_1", "userId": "_2002_1", "courseId": "_12346_1", "role": "Student", "availability": { "available": "Yes" } },
+    { "id": "_30005_1", "userId": "_2005_1", "courseId": "_12346_1", "role": "Student", "availability": { "available": "Yes" } },
+    { "id": "_30006_1", "userId": "_2004_1", "courseId": "_12346_1", "role": "Instructor", "availability": { "available": "Yes" } },
+
+    { "id": "_30007_1", "userId": "_2003_1", "courseId": "_12347_1", "role": "Student", "availability": { "available": "No" } },
+    { "id": "_30008_1", "userId": "_2004_1", "courseId": "_12347_1", "role": "Instructor", "availability": { "available": "Yes" } },
+
+    { "id": "_30009_1", "userId": "_2001_1", "courseId": "_12348_1", "role": "Student", "availability": { "available": "Yes" } },
+    { "id": "_30010_1", "userId": "_2005_1", "courseId": "_12348_1", "role": "Student", "availability": { "available": "Yes" } },
+    { "id": "_30011_1", "userId": "_2004_1", "courseId": "_12348_1", "role": "Instructor", "availability": { "available": "Yes" } },
+
+    { "id": "_30012_1", "userId": "_2001_1", "courseId": "_12349_1", "role": "Student", "availability": { "available": "Yes" } },
+    { "id": "_30013_1", "userId": "_2002_1", "courseId": "_12349_1", "role": "Student", "availability": { "available": "Yes" } },
+    { "id": "_30014_1", "userId": "_2004_1", "courseId": "_12349_1", "role": "Instructor", "availability": { "available": "Yes" } }
+  ],
+  "paging": { "nextPage": null }
+}
+

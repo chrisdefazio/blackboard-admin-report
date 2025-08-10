@@ -1,0 +1,38 @@
+[
+  {
+    "id": "_12345_1",
+    "courseId": "CS101-2025FA",
+    "name": "Intro to Computer Science",
+    "description": "Fundamentals of computing.",
+    "availability": { "available": "Yes" }
+  },
+  {
+    "id": "_12346_1",
+    "courseId": "MATH201-2025FA",
+    "name": "Calculus I",
+    "description": "Limits, derivatives, and integrals.",
+    "availability": { "available": "Yes" }
+  },
+  {
+    "id": "_12347_1",
+    "courseId": "HIST200-2025FA",
+    "name": "World History",
+    "description": "Survey of world civilizations.",
+    "availability": { "available": "No" }
+  },
+  {
+    "id": "_12348_1",
+    "courseId": "CS201-2025FA",
+    "name": "Data Structures",
+    "description": "Arrays, lists, trees, and graphs.",
+    "availability": { "available": "Yes" }
+  },
+  {
+    "id": "_12349_1",
+    "courseId": "ENG150-2025FA",
+    "name": "Academic Writing",
+    "description": "Composition and rhetoric.",
+    "availability": { "available": "Yes" }
+  }
+]
+

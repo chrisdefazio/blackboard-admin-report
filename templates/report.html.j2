@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enrollment Report</title>
+    <style>
+      :root {
+        --border: #d0d7de;
+        --bg-header: #f6f8fa;
+      }
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 2rem; color: #24292f; }
+      header, footer { margin-bottom: 1rem; }
+      header h1 { margin: 0 0 .25rem 0; font-size: 1.5rem; }
+      .summary { color: #57606a; }
+      .table-wrap { overflow-x: auto; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { border: 1px solid var(--border); padding: 0.5rem; text-align: left; }
+      thead th { background: var(--bg-header); cursor: pointer; user-select: none; }
+      tbody tr:nth-child(even) { background: #fcfcfd; }
+      .muted { color: #6e7781; }
+    </style>
+    <script>
+      // Tiny sortable table (click header to sort). Stable-ish for simple data.
+      function sortTable(tableId, colIndex) {
+        const table = document.getElementById(tableId);
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.rows);
+        const current = table.getAttribute('data-sortcol')|0;
+        const dir = (current == colIndex && table.getAttribute('data-sortdir') === 'asc') ? 'desc' : 'asc';
+        rows.sort((a, b) => {
+          const ax = a.cells[colIndex].innerText.toLowerCase();
+          const bx = b.cells[colIndex].innerText.toLowerCase();
+          if (ax < bx) return dir === 'asc' ? -1 : 1;
+          if (ax > bx) return dir === 'asc' ? 1 : -1;
+          return 0;
+        });
+        rows.forEach(r => tbody.appendChild(r));
+        table.setAttribute('data-sortcol', colIndex);
+        table.setAttribute('data-sortdir', dir);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Enrollment Report</h1>
+      <p class="summary">
+        Courses: {{ summary.courses }} · Users: {{ summary.users }} · Enrollments: {{ summary.enrollments }}
+      </p>
+    </header>
+
+    <div class="table-wrap">
+      <table id="enrollments">
+        <thead>
+          <tr>
+            <th onclick="sortTable('enrollments', 0)">Course</th>
+            <th onclick="sortTable('enrollments', 1)">Term</th>
+            <th onclick="sortTable('enrollments', 2)">User</th>
+            <th onclick="sortTable('enrollments', 3)">Role</th>
+            <th onclick="sortTable('enrollments', 4)">Enroll Avail</th>
+            <th onclick="sortTable('enrollments', 5)">User Avail</th>
+            <th onclick="sortTable('enrollments', 6)">Course Avail</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+          <tr>
+            <td>{{ row.courseLabel }}</td>
+            <td>{{ row.term }}</td>
+            <td>{{ row.userFullName }}</td>
+            <td>{{ row.role }}</td>
+            <td>{{ yes_no(row.enrollmentAvailable) }}</td>
+            <td>{{ yes_no(row.userAvailable) }}</td>
+            <td>{{ yes_no(row.courseAvailable) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <small class="muted">Generated at: {{ generated_at }}</small>
+    </footer>
+  </body>
+  </html>
+

@@ -1,0 +1,6 @@
+pandas
+pydantic
+typer
+jinja2
+pytest
+
