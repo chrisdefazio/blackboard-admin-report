@@ -9,6 +9,10 @@ loading course, user, and enrollment data, applying filters, and generating clea
 
 ---
 
+![CLI demo](assets/cli_screenshot.png)
+
+![Report screenshot](assets/report_screenshot.png)
+
 ### Quick start
 
 1) Python 3.11+
