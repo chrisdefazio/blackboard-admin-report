@@ -1,11 +1,11 @@
 ## Blackboard (SOLE) Admin Prep – Enrollment Report
 
 A small weekend project to simulate Blackboard Learn (Anthology Learn) admin tasks:  
-loading course, user, and enrollment data, applying filters, and generating clean reports.
+loading course, user, and enrollment data, applying filters, and generating reports.
 
-**🔗 Live HTML Report:** [View here](https://chrisdefazio.github.io/blackboard-admin-report/)  
-**📂 Repo:** [GitHub](https://github.com/chrisdefazio/blackboard-admin-report)  
-**📄 CSV Output:** [enrollment_report.csv](out/enrollment_report.csv)
+**🔗 [View Sample HTML Report](https://chrisdefazio.github.io/blackboard-admin-report/)**  
+**📄 [Download Sample CSV Output](out/enrollment_report.csv)**
+
 
 ---
 
@@ -13,28 +13,9 @@ loading course, user, and enrollment data, applying filters, and generating clea
 
 ### Quick start
 
-1) Python 3.11+
-
-2) Create a venv and install deps
-
-```
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
-pip install -r requirements.txt
-```
-
-3) Generate the report (uses `data/` by default, writes to `out/`)
-
-```
-python scripts/report_generator.py --help
-python scripts/report_generator.py
-```
-
-Artifacts are written to `out/`:
-
-- `enrollment_report.csv`
-- `enrollment_report.html`
-- `audit.json`
+1. Clone the repo & create a Python 3.11+ virtualenv  
+2. `pip install -r requirements.txt`  
+3. `python scripts/report_generator.py generate`
 
 ### CLI examples
 
@@ -127,6 +108,3 @@ Tests cover model validation, warnings on unknown roles, filtering behavior, and
 
 `data/*_wrapped.json` files mimic Learn's paged list responses with `{ "results": [...], "paging": { "nextPage": null } }`.
 
-### Screenshots
-
-Add screenshots of the HTML report after running with your data.
