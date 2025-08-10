@@ -1,4 +1,4 @@
-## Blackboard (SOLE) Admin Prep – Enrollment Report
+## Blackboard (SOLE) Admin Report Generator
 
 A small weekend project to simulate Blackboard Learn (Anthology Learn) admin tasks:  
 loading course, user, and enrollment data, applying filters, and generating reports.
