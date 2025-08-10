@@ -47,7 +47,7 @@ ehthumbs.db
 Thumbs.db
 
 # Project specific
-out/
+# out/
 *.log
 
 # Pytest

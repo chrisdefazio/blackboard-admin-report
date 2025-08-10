@@ -1,0 +1,15 @@
+courseInternalId,courseId,courseName,term,userId,userName,userFullName,email,role,enrollmentAvailable,userAvailable,courseAvailable
+_12345_1,CS101-2025FA,Intro to Computer Science,2025FA,_2001_1,jdoe,Jane Doe,jane.doe@example.edu,Student,Yes,Yes,Yes
+_12345_1,CS101-2025FA,Intro to Computer Science,2025FA,_2002_1,tnguyen,Thanh Nguyen,thanh.nguyen@example.edu,TeachingAssistant,Yes,Yes,Yes
+_12345_1,CS101-2025FA,Intro to Computer Science,2025FA,_2004_1,aperez,Ana Perez,ana.perez@example.edu,Instructor,Yes,Yes,Yes
+_12346_1,MATH201-2025FA,Calculus I,2025FA,_2002_1,tnguyen,Thanh Nguyen,thanh.nguyen@example.edu,Student,Yes,Yes,Yes
+_12346_1,MATH201-2025FA,Calculus I,2025FA,_2005_1,jlee,Jordan Lee,jordan.lee@example.edu,Student,Yes,Yes,Yes
+_12346_1,MATH201-2025FA,Calculus I,2025FA,_2004_1,aperez,Ana Perez,ana.perez@example.edu,Instructor,Yes,Yes,Yes
+_12347_1,HIST200-2025FA,World History,2025FA,_2003_1,csmith,Chris Smith,chris.smith@example.edu,Student,No,No,No
+_12347_1,HIST200-2025FA,World History,2025FA,_2004_1,aperez,Ana Perez,ana.perez@example.edu,Instructor,Yes,Yes,No
+_12348_1,CS201-2025FA,Data Structures,2025FA,_2001_1,jdoe,Jane Doe,jane.doe@example.edu,Student,Yes,Yes,Yes
+_12348_1,CS201-2025FA,Data Structures,2025FA,_2005_1,jlee,Jordan Lee,jordan.lee@example.edu,Student,Yes,Yes,Yes
+_12348_1,CS201-2025FA,Data Structures,2025FA,_2004_1,aperez,Ana Perez,ana.perez@example.edu,Instructor,Yes,Yes,Yes
+_12349_1,ENG150-2025FA,Academic Writing,2025FA,_2001_1,jdoe,Jane Doe,jane.doe@example.edu,Student,Yes,Yes,Yes
+_12349_1,ENG150-2025FA,Academic Writing,2025FA,_2002_1,tnguyen,Thanh Nguyen,thanh.nguyen@example.edu,Student,Yes,Yes,Yes
+_12349_1,ENG150-2025FA,Academic Writing,2025FA,_2004_1,aperez,Ana Perez,ana.perez@example.edu,Instructor,Yes,Yes,Yes
