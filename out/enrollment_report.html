@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enrollment Report</title>
+    <style>
+      :root {
+        --border: #d0d7de;
+        --bg-header: #f6f8fa;
+      }
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 2rem; color: #24292f; }
+      header, footer { margin-bottom: 1rem; }
+      header h1 { margin: 0 0 .25rem 0; font-size: 1.5rem; }
+      .summary { color: #57606a; }
+      .table-wrap { overflow-x: auto; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { border: 1px solid var(--border); padding: 0.5rem; text-align: left; }
+      thead th { background: var(--bg-header); cursor: pointer; user-select: none; }
+      tbody tr:nth-child(even) { background: #fcfcfd; }
+      .muted { color: #6e7781; }
+    </style>
+    <script>
+      // Tiny sortable table (click header to sort). Stable-ish for simple data.
+      function sortTable(tableId, colIndex) {
+        const table = document.getElementById(tableId);
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.rows);
+        const current = table.getAttribute('data-sortcol')|0;
+        const dir = (current == colIndex && table.getAttribute('data-sortdir') === 'asc') ? 'desc' : 'asc';
+        rows.sort((a, b) => {
+          const ax = a.cells[colIndex].innerText.toLowerCase();
+          const bx = b.cells[colIndex].innerText.toLowerCase();
+          if (ax < bx) return dir === 'asc' ? -1 : 1;
+          if (ax > bx) return dir === 'asc' ? 1 : -1;
+          return 0;
+        });
+        rows.forEach(r => tbody.appendChild(r));
+        table.setAttribute('data-sortcol', colIndex);
+        table.setAttribute('data-sortdir', dir);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Enrollment Report</h1>
+      <p class="summary">
+        Courses: 5 · Users: 5 · Enrollments: 14
+      </p>
+    </header>
+
+    <div class="table-wrap">
+      <table id="enrollments">
+        <thead>
+          <tr>
+            <th onclick="sortTable('enrollments', 0)">Course</th>
+            <th onclick="sortTable('enrollments', 1)">Term</th>
+            <th onclick="sortTable('enrollments', 2)">User</th>
+            <th onclick="sortTable('enrollments', 3)">Role</th>
+            <th onclick="sortTable('enrollments', 4)">Enroll Avail</th>
+            <th onclick="sortTable('enrollments', 5)">User Avail</th>
+            <th onclick="sortTable('enrollments', 6)">Course Avail</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>CS101-2025FA – Intro to Computer Science</td>
+            <td>2025FA</td>
+            <td>Jane Doe</td>
+            <td>Student</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>CS101-2025FA – Intro to Computer Science</td>
+            <td>2025FA</td>
+            <td>Thanh Nguyen</td>
+            <td>TeachingAssistant</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>CS101-2025FA – Intro to Computer Science</td>
+            <td>2025FA</td>
+            <td>Ana Perez</td>
+            <td>Instructor</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>MATH201-2025FA – Calculus I</td>
+            <td>2025FA</td>
+            <td>Thanh Nguyen</td>
+            <td>Student</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>MATH201-2025FA – Calculus I</td>
+            <td>2025FA</td>
+            <td>Jordan Lee</td>
+            <td>Student</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>MATH201-2025FA – Calculus I</td>
+            <td>2025FA</td>
+            <td>Ana Perez</td>
+            <td>Instructor</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>HIST200-2025FA – World History</td>
+            <td>2025FA</td>
+            <td>Chris Smith</td>
+            <td>Student</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          
+          <tr>
+            <td>HIST200-2025FA – World History</td>
+            <td>2025FA</td>
+            <td>Ana Perez</td>
+            <td>Instructor</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>No</td>
+          </tr>
+          
+          <tr>
+            <td>CS201-2025FA – Data Structures</td>
+            <td>2025FA</td>
+            <td>Jane Doe</td>
+            <td>Student</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>CS201-2025FA – Data Structures</td>
+            <td>2025FA</td>
+            <td>Jordan Lee</td>
+            <td>Student</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>CS201-2025FA – Data Structures</td>
+            <td>2025FA</td>
+            <td>Ana Perez</td>
+            <td>Instructor</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>ENG150-2025FA – Academic Writing</td>
+            <td>2025FA</td>
+            <td>Jane Doe</td>
+            <td>Student</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>ENG150-2025FA – Academic Writing</td>
+            <td>2025FA</td>
+            <td>Thanh Nguyen</td>
+            <td>Student</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>ENG150-2025FA – Academic Writing</td>
+            <td>2025FA</td>
+            <td>Ana Perez</td>
+            <td>Instructor</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <small class="muted">Generated at: 2025-08-10T14:31:18-04:00</small>
+    </footer>
+  </body>
+  </html>

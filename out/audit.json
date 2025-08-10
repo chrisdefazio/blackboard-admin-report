@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-08-10T14:31:18-04:00",
+  "args": {
+    "data_dir": "data",
+    "out_dir": "out",
+    "course_filter": null,
+    "include_instructors": true,
+    "include_students": true,
+    "only_available": false
+  },
+  "input_sizes": {
+    "courses": 5,
+    "users": 5,
+    "enrollments": 14
+  },
+  "output_sizes": {
+    "csv_rows": 14,
+    "unique_courses": 5,
+    "unique_users": 5
+  },
+  "filters": {
+    "only_available": false,
+    "course_filter": null,
+    "roles_included": {
+      "instructors": true,
+      "students": true
+    }
+  }
+}
