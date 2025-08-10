@@ -9,9 +9,7 @@ loading course, user, and enrollment data, applying filters, and generating clea
 
 ---
 
-![CLI demo](assets/cli_screenshot.png)
-
-![Report screenshot](assets/report_screenshot.png)
+![CLI demo](assets/blackboard.gif)
 
 ### Quick start
 
