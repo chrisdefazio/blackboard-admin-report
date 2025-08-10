@@ -108,3 +108,10 @@ Tests cover model validation, warnings on unknown roles, filtering behavior, and
 
 `data/*_wrapped.json` files mimic Learn's paged list responses with `{ "results": [...], "paging": { "nextPage": null } }`.
 
+---
+
+## References
+
+- [Blackboard Learn REST API – Public v1](https://developer.blackboard.com/portal/displayApi/Learn) – Official Anthology/Blackboard API documentation used to shape mock JSON and data models.
+- [Anthology Developer Portal](https://developer.anthology.com/portal) – OAuth setup, client credentials flow, and endpoint references.
+- [Blackboard REST API Getting Started Guide](https://docs.blackboard.com/learn/rest/getting-started) – Overview of authentication and API usage.
